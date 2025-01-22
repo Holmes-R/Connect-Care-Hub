@@ -1,5 +1,8 @@
 .env
-/venv
-/Connect_Care_Hub/__pycache__
-/Connect_Care_Hub/Myapp/__pycache__
-/Connect_Care_Hub/Myapp/migrations
+
+# Virtual environment
+/venv/
+
+/Connect_Care_Hub/__pycache__/
+/Connect_Care_Hub/Myapp/__pycache__/
+/Connect_Care_Hub/Myapp/migrations/

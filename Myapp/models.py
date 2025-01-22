@@ -76,7 +76,7 @@ class Hospital(models.Model):
     Address = models.TextField(help_text="Hospital Address",null=False,blank=False,unique=False,max_length=100)
     Pincode = models.CharField(max_length=6,validators=[pincode_validator])
     PhoneNumber = models.CharField(help_text="Hospital Number",blank=False,max_length=13)
-    AvailableDoctors = models.IntegerField(max_length=3)
+    AvailableDoctors = models.IntegerField()
     Is_Active = models.BooleanField(default=True)
 
     blood_types = models.ManyToManyField(Blood, related_name="hospitals")
