@@ -114,11 +114,18 @@ class Doctor(models.Model):
     
 
 class Availability(models.Model):
-    Ambulance_count = models.IntegerField(blank=True, null=True, help_text="Number of Ambulances available")  # Count of ambulances
-    hospital = models.ForeignKey(Hospital, related_name="availabilities", on_delete=models.CASCADE)  # Link to the hospital
-
+    Ambulance_count = models.IntegerField(blank=True, null=True, help_text="Number of Ambulances available")
+    hospital = models.ForeignKey(Hospital, related_name="availabilities", on_delete=models.CASCADE) 
     def __str__(self):
         return f"Availability at {self.hospital.HospitalName}"
     
     class Meta:
         verbose_name_plural = 'Availability'
+
+
+class Appointment(models.Model):
+    PatientName = models.CharField(help_text="Patient Name",max_length=50)
+    Age =models.CharField(help_text="Patient Name",max_length=3)
+    Description = models.TextField(help_text="Patient Description")
+    HospitalName = models.ForeignKey(Hospital,on_delete=models.CASCADE,related_name="Appointments")
+    date = models.DateField()

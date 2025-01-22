@@ -35,7 +35,6 @@ SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
