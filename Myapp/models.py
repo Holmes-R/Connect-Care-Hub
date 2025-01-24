@@ -129,3 +129,6 @@ class Appointment(models.Model):
     Description = models.TextField(help_text="Patient Description")
     HospitalName = models.ForeignKey(Hospital,on_delete=models.CASCADE,related_name="Appointments")
     date = models.DateField()
+
+    class Meta:
+        verbose_name_plural = 'Appointment'
