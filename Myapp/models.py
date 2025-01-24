@@ -21,7 +21,7 @@ class Blood(models.Model):
     Qantity = models.IntegerField(help_text="Quantity of Blood available") # (Units or Liters)
 
     def __str__(self):
-        return f"{self.bloodType} - {self.Quantity} units"
+        return f"{self.BloodType} - {self.Qantity} units"
     
     class Meta:
         verbose_name_plural = 'Blood'
@@ -125,10 +125,12 @@ class Availability(models.Model):
 
 class Appointment(models.Model):
     PatientName = models.CharField(help_text="Patient Name",max_length=50)
-    Age =models.CharField(help_text="Patient Name",max_length=3)
+    Age =models.CharField(help_text="Patient Age",max_length=3)
     Description = models.TextField(help_text="Patient Description")
     HospitalName = models.ForeignKey(Hospital,on_delete=models.CASCADE,related_name="Appointments")
     date = models.DateField()
 
     class Meta:
         verbose_name_plural = 'Appointment'
+    def __str__(self):
+        return "f {self.HospitalName} -- {self.PatientName}"
