@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from Myapp.fast_api import app 
+from fast_api import app 
 from fastapi.middleware.wsgi import WSGIMiddleware
 urlpatterns = [
     path('admin/', admin.site.urls),

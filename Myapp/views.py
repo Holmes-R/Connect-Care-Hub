@@ -5,6 +5,5 @@ from Myapp.models import Appointment, Hospital
 from pydantic import BaseModel
 from datetime import date
 
-# Create your views here.
 
 app = FastAPI()

@@ -110,6 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+ASGI_APPLICATION = "Connect_Care_Hub.asgi.application"
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
